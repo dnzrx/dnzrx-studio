@@ -1,0 +1,310 @@
+/* =========================
+   Responsive
+========================= */
+@media (min-width: 640px) {
+  .work-song-title {
+    font-size: 1.24rem;
+  }
+}
+@media (min-width: 900px) {
+  .works-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .works-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.05rem;
+  }
+}
+@media (max-width: 1023px) {
+  .timeline-line {
+    width: 3px;
+    background: rgba(var(--twilight-rgb),0.24);
+  }
+  .timeline-line-glow,
+  .timeline-line-glow-final {
+    display: none;
+  }
+  .timeline-dot {
+    animation: none;
+    box-shadow: 0 0 0 4px rgba(var(--rose-rgb),0.16);
+  }
+  .timeline-dot-final {
+    box-shadow: 0 0 0 4px rgba(var(--green-rgb),0.24);
+  }
+  .timeline-row {
+    min-height: auto;
+  }
+  .timeline-card {
+    border-radius: var(--card-radius);
+  }
+}
+@media (max-width: 639px) {
+  body {
+    --footer-top-divider-gap: .72rem;
+    --footer-link-gap-row: .42rem;
+    --footer-link-gap-col: .66rem;
+  }
+  .works-list {
+    max-width: 28rem;
+  }
+  .work-song-card {
+    grid-template-columns: 4.35rem minmax(0, 1fr);
+    gap: .64rem;
+    padding: .62rem;
+  }
+  .work-song-thumb {
+    border-radius: .62rem;
+  }
+  .work-song-artist {
+    font-size: .68rem;
+  }
+  .work-song-title {
+    font-size: 1.08rem;
+    line-height: 1.2;
+  }
+  .work-song-listen-btn {
+    min-width: 4.35rem;
+    padding: .36rem .6rem;
+    font-size: .67rem;
+  }
+  .cta-discord {
+    min-height: 2.65rem;
+    padding: .66rem .9rem;
+    gap: .45rem;
+  }
+  .cta-title {
+    font-size: .88rem;
+    white-space: normal;
+    line-height: 1.15;
+    text-align: center;
+  }
+  #intro .intro-status-badge {
+    padding: .48rem .82rem;
+    font-size: .64rem;
+    gap: .36rem;
+  }
+  #intro .intro-social-row {
+    gap: .55rem;
+  }
+  #intro .intro-social-row a {
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+  .commission-preview-badge {
+    --badge-fs: .58rem;
+    --badge-lh: 1.2;
+    --badge-ls: .05em;
+    --badge-py: .34rem;
+    --badge-px: .56rem;
+    --badge-gap: .28rem;
+    --badge-icon: 14px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    border-radius: .9rem;
+  }
+  .commission-preview-badge span:last-child {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .site-footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .site-footer-links {
+    width: 100%;
+  }
+  .site-footer-links ul {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .commission-preview-badge {
+    --badge-fs: .6rem;
+    --badge-lh: 1.18;
+    --badge-ls: .02em;
+    --badge-py: .32rem;
+    --badge-px: .5rem;
+    --badge-gap: .22rem;
+    --badge-icon: 12px;
+  }
+  .cta-discord {
+    max-width: 21.5rem;
+    margin-inline: 0;
+  }
+  #intro .intro-cta {
+    max-width: 22rem;
+  }
+  #tc .tc-policy-card {
+    min-height: 12.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .commission-preview-badge {
+    --badge-fs: clamp(.74rem, calc(.74rem + (100vw - 1200px) * 0.0009), 1.2rem);
+    --badge-lh: 1.18;
+    --badge-ls: clamp(.05em, calc(.05em + (100vw - 1200px) * 0.00005), .09em);
+    --badge-py: clamp(.4rem, calc(.4rem + (100vw - 1200px) * 0.00055), .82rem);
+    --badge-px: clamp(.72rem, calc(.72rem + (100vw - 1200px) * 0.001), 1.45rem);
+    --badge-gap: clamp(.32rem, calc(.32rem + (100vw - 1200px) * 0.00045), .66rem);
+    --badge-icon: clamp(16px, calc(16px + (100vw - 1200px) * 0.02), 30px);
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: clamp(16px, calc(16px + (100vw - 1920px) * 0.0032), 22px);
+  }
+  .site-shell {
+    max-width: min(92vw, 3000px);
+  }
+  #intro {
+    min-height: min(100vh, 1200px);
+  }
+  #flow .panel {
+    padding: clamp(2.2rem, 3vw, 3.2rem);
+  }
+  #flow .timeline-row {
+    min-height: clamp(7rem, 7.5vh, 10rem);
+  }
+  #flow .timeline-card {
+    max-width: clamp(32rem, 34vw, 48rem);
+    padding: clamp(1.05rem, 1.2vw, 1.4rem);
+  }
+}
+@media (max-width: 767px) {
+  #tc [data-render="policy-details-mobile"] {
+    display: grid;
+    gap: .78rem;
+  }
+  #tc .md\:hidden details {
+    padding: .96rem 1rem;
+    border-radius: 1.06rem;
+  }
+  #tc .md\:hidden details p {
+    margin-top: .42rem;
+    font-size: .98rem;
+    line-height: 1.72;
+  }
+  #tc .md\:hidden .tc-mobile-detail-copy {
+    margin-top: .42rem;
+  }
+  #tc .md\:hidden .tc-mobile-line {
+    display: block;
+  }
+  #tc .md\:hidden .tc-mobile-line + .tc-mobile-line {
+    margin-top: .82rem;
+  }
+  #tc .md\:hidden details p strong {
+    font-weight: 600;
+    color: rgba(var(--ink-rgb),0.9);
+  }
+  #tc .md\:hidden .tc-mobile-summary-main {
+    font-size: 1.04rem;
+    line-height: 1.3;
+  }
+  #commission .panel {
+    padding: 1rem;
+  }
+  #commission .panel > .mb-6 {
+    margin-bottom: .85rem;
+  }
+  #commission .panel > .grid {
+    gap: .9rem;
+  }
+  #commission .panel h2 {
+    font-size: clamp(1.34rem, 4.3vw, 1.5rem);
+    line-height: 1.14;
+  }
+  #commission .grid > :is(article, aside) {
+    border-color: rgba(var(--line-rgb),0.74);
+    box-shadow: 0 8px 18px rgba(var(--ink-rgb),0.08);
+  }
+  #commission .grid > :is(article, aside) > div {
+    padding-inline: 1rem;
+  }
+  #commission .grid > article :is(ul, ol, p) {
+    line-height: 1.5;
+  }
+  #commission .commission-addon-mobile-list {
+    padding: .75rem;
+    gap: .78rem;
+    font-size: clamp(14px, 2.45vw, 15px);
+  }
+  #commission .commission-addon-item {
+    border-color: rgba(var(--line-rgb),0.72);
+    background: rgba(255,255,255,0.92);
+    padding: .88rem .92rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-content: start;
+    min-height: 9.1rem;
+  }
+  #commission .commission-addon-item .font-semibold {
+    font-size: 1.08rem;
+    line-height: 1.28;
+    color: rgba(var(--ink-rgb),0.92);
+  }
+  #commission .commission-addon-item .text-\[11px\].font-semibold.text-ethereal-roseDark {
+    display: inline-flex;
+    width: fit-content;
+    margin-top: .36rem;
+    padding: .14rem .44rem;
+    border: 1px solid rgba(var(--rose-rgb),0.32);
+    border-radius: 999px;
+    background: rgba(var(--rose-rgb),0.1);
+    font-size: .66rem;
+    letter-spacing: .02em;
+  }
+  #commission .commission-addon-recommended {
+    border-color: rgba(var(--rose-rgb),0.56);
+    background: rgba(var(--rose-rgb),0.05);
+    box-shadow: 0 7px 16px rgba(var(--rose-rgb),0.11);
+  }
+  #commission .commission-addon-item p.mt-1 {
+    margin-top: .42rem;
+    color: rgba(var(--twilight-rgb),0.78);
+    font-size: 1.01rem;
+    line-height: 1.62;
+    max-width: 35ch;
+  }
+  #commission .commission-addon-mobile-price {
+    margin-top: .82rem;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: .01em;
+    color: rgba(var(--rose-rgb),0.9);
+    align-self: end;
+  }
+  #commission .commission-addon-mobile-price .currency {
+    margin-right: .45rem;
+    font-size: .7em;
+    font-weight: 700;
+    letter-spacing: .1em;
+    color: rgba(var(--rose-rgb),0.82);
+  }
+  #commission .commission-addon-item p {
+    line-height: 1.55;
+  }
+  #commission .commission-addon-subtitle {
+    max-width: 27ch;
+    line-height: 1.42;
+  }
+  #commission .addon-price-pill {
+    min-width: 2.7rem;
+    padding: .16rem .42rem;
+    font-size: .68rem;
+  }
+  #commission .commission-package-card > div:first-child .text-4xl {
+    font-size: clamp(2rem, 8vw, 2.25rem);
+  }
+  #commission .commission-package-card > div:first-child .text-base {
+    font-size: clamp(.92rem, 3vw, 1rem);
+  }
+}

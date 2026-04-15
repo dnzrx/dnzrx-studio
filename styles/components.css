@@ -1,0 +1,364 @@
+/* =========================
+   Gallery
+========================= */
+/* Uses: `--card-radius`, `--ui-hover-transition`, and surface emphasis tokens */
+.works-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .9rem;
+  margin-top: .32rem;
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+}
+#gallery .panel > .flex {
+  margin-bottom: .8rem;
+}
+.work-song-card {
+  display: grid;
+  grid-template-columns: clamp(5.6rem, 9vw, 8rem) minmax(0, 1fr);
+  align-items: stretch;
+  gap: .86rem;
+  padding: .64rem;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(var(--line-rgb),0.9);
+  background: rgba(255,255,255,0.94);
+  box-shadow: 0 12px 24px rgba(var(--ink-rgb),0.1);
+  transition: background var(--ui-hover-transition), border-color var(--ui-hover-transition), box-shadow var(--ui-hover-transition), transform var(--ui-hover-transition);
+}
+.work-song-card:hover {
+  background: var(--surface-emphasis-bg);
+  border-color: var(--surface-emphasis-border);
+  box-shadow: var(--surface-emphasis-shadow);
+  transform: translateY(-1px);
+}
+.works-empty-state {
+  display: grid;
+  gap: .25rem;
+  padding: .1rem 0 .1rem .85rem;
+  width: 100%;
+  max-width: 30rem;
+  border-left: 2px solid rgba(var(--line-rgb),0.95);
+}
+.works-empty-title {
+  margin: 0;
+  color: rgba(var(--ink-rgb),0.9);
+  font-size: .98rem;
+  line-height: 1.4;
+  font-weight: 650;
+}
+.works-empty-copy {
+  margin: .3rem 0 0;
+  color: rgba(var(--twilight-rgb),0.72);
+  font-size: .86rem;
+  line-height: 1.55;
+  max-width: 40ch;
+}
+.work-song-thumb {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  border: 0;
+  border-radius: .68rem;
+}
+
+.work-song-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .64rem;
+}
+.work-song-meta {
+  min-width: 0;
+  padding: .05rem 0 0;
+}
+.work-song-artist {
+  margin: 0;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(var(--twilight-rgb),0.58);
+}
+.work-song-title {
+  margin: .14rem 0 0;
+  font-size: 1.18rem;
+  line-height: 1.18;
+  font-weight: 700;
+  color: rgba(var(--ink-rgb),0.95);
+  text-wrap: balance;
+}
+.work-song-listen-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  gap: .3rem;
+  min-width: 5rem;
+  padding: .45rem .75rem;
+  border-radius: .78rem;
+  border: 1px solid rgba(var(--rose-rgb),0.42);
+  background: rgba(255,255,255,0.94);
+  color: rgba(var(--twilight-rgb),0.9);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: border-color var(--ui-hover-transition), background var(--ui-hover-transition), color var(--ui-hover-transition), transform var(--ui-hover-transition);
+}
+.work-song-listen-btn .material-symbols-outlined {
+  font-size: 15px;
+  color: rgba(var(--rose-rgb),0.9);
+}
+.work-song-listen-btn:hover {
+  border-color: rgba(var(--rose-rgb),0.62);
+  background: rgba(var(--rose-rgb),0.1);
+  color: rgba(var(--ink-rgb),0.94);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Buttons / Pills
+========================= */
+/* Uses: shared interaction timing and CTA/emphasis surface tokens */
+.addon-price-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  padding: .2rem .5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--line-rgb),0.95);
+  background: rgba(255,255,255,0.85);
+  color: #40345b;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.cta-discord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  gap: .58rem;
+  min-height: 3.05rem;
+  padding: .9rem 1.2rem;
+  border-radius: .95rem;
+  border: 1px solid rgba(126,45,72,0.28);
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(140deg, #d06286, #b14464);
+  box-shadow: 0 12px 24px rgba(var(--cta-rgb),0.3);
+  transition: transform var(--ui-hover-transition), box-shadow var(--ui-hover-transition), filter var(--ui-hover-transition);
+}
+.cta-discord-icon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+.cta-discord:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 27px rgba(var(--cta-rgb),0.36);
+  filter: saturate(1.04);
+}
+.cta-discord-primary {
+  box-shadow: 0 10px 22px rgba(var(--cta-rgb),0.3);
+  background: linear-gradient(140deg, #c9577e, #ae425f);
+}
+.cta-discord-primary:hover {
+  box-shadow: 0 13px 25px rgba(var(--cta-rgb),0.34);
+  filter: saturate(1.03);
+}
+
+/* Add-on rows still explicitly list transition properties */
+#commission .commission-addon-item,
+#commission .commission-addon-recommended,
+#commission .hidden.md\:block tbody tr,
+#commission .hidden.md\:block tbody .addon-price-pill {
+  transition-duration: var(--hover-slow-duration) !important;
+  transition-timing-function: ease !important;
+}
+#commission .hidden.md\:block tbody tr {
+  transition-property: background-color, border-color, color, box-shadow !important;
+}
+.cta-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: .005em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+/* Commission emphasis surfaces share the same token family as gallery hover */
+.commission-preview-badge {
+  --badge-fs: .76rem;
+  --badge-lh: 1.2;
+  --badge-ls: .08em;
+  --badge-py: .42rem;
+  --badge-px: .78rem;
+  --badge-gap: .38rem;
+  --badge-icon: 16px;
+  position: relative;
+  isolation: isolate;
+  font-size: var(--badge-fs);
+  line-height: var(--badge-lh);
+  letter-spacing: var(--badge-ls);
+  white-space: nowrap;
+  padding: var(--badge-py) var(--badge-px);
+  gap: var(--badge-gap);
+  max-width: 100%;
+  color: #7a1f3f;
+  border-color: rgba(var(--rose-rgb),0.68);
+  background: var(--surface-emphasis-bg);
+  box-shadow: var(--surface-emphasis-shadow);
+}
+.commission-preview-badge .material-symbols-outlined {
+  font-size: var(--badge-icon) !important;
+}
+.commission-preview-badge::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 1.2px solid rgba(var(--rose-rgb),0.86);
+  opacity: .85;
+  animation: benefitPulse 3.2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+.commission-addon-recommended {
+  position: relative;
+  background: var(--surface-emphasis-bg);
+  border-color: var(--surface-emphasis-border);
+  box-shadow: var(--surface-emphasis-shadow);
+}
+.commission-addon-recommended::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid rgba(var(--rose-rgb),0.68);
+  opacity: .62;
+  pointer-events: none;
+}
+.commission-addon-recommended-row > td {
+  background: rgba(var(--rose-rgb),0.09);
+  border-top: 1px solid rgba(var(--rose-rgb),0.34);
+  border-bottom: 1px solid rgba(var(--rose-rgb),0.34);
+}
+.commission-addon-recommended-row:hover > td {
+  background: rgba(var(--rose-rgb),0.16);
+}
+.commission-addon-recommended .font-semibold,
+.commission-addon-recommended-row > td:first-child {
+  color: #7a1f3f;
+}
+
+/* =========================
+   T&C Mobile Details
+========================= */
+.tc-mobile-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .7rem;
+  width: 100%;
+  min-height: 50px;
+}
+.tc-mobile-summary-main {
+  display: inline-flex;
+  align-items: center;
+  gap: .52rem;
+  line-height: 1.28;
+  font-size: .99rem;
+}
+.tc-mobile-indicator {
+  color: rgba(var(--twilight-rgb),0.78);
+  font-size: 20px !important;
+  transition: transform .22s ease, color .2s ease;
+}
+details[open] > summary .tc-mobile-indicator {
+  transform: rotate(180deg);
+  color: rgba(var(--ink-rgb),0.78);
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* =========================
+   T&C Policy Card Hierarchy
+========================= */
+.tc-policy-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.05rem 1.1rem !important;
+  background: rgba(255,255,255,0.98) !important;
+  border-color: rgba(var(--line-rgb),0.96) !important;
+  box-shadow: 0 10px 24px rgba(var(--ink-rgb),0.08);
+}
+.tc-snapshot-panel {
+  background: linear-gradient(160deg, rgba(255,255,255,0.97), rgba(var(--line-rgb),0.18)) !important;
+  border-color: rgba(var(--line-rgb),0.98) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.62), 0 10px 24px rgba(var(--ink-rgb),0.07);
+}
+.tc-policy-points {
+  max-width: 43ch;
+}
+.tc-policy-point {
+  font-size: 1.03rem;
+  line-height: 1.68;
+  color: rgba(var(--twilight-rgb),0.92);
+}
+.tc-emphasis {
+  color: rgba(var(--ink-rgb),0.95);
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  #tc .tc-policy-card h4 {
+    font-size: 1.1rem;
+    line-height: 1.36;
+    font-weight: 800;
+  }
+  #tc [data-render="policy-snapshot-desktop"] {
+    font-size: 1.03rem;
+    line-height: 1.66;
+  }
+  #tc [data-render="policy-snapshot-desktop"] li {
+    color: rgba(var(--twilight-rgb),0.92);
+  }
+  .tc-desktop-layout {
+    column-gap: 1.1rem;
+  }
+  .tc-detail-grid {
+    padding-left: .95rem;
+    border-left: 1px solid rgba(var(--line-rgb),0.7);
+  }
+}
+
+
+/* Match desktop/tablet add-on pricing language to mobile */
+#commission .hidden.md\\:block tbody .addon-price-pill {
+  min-width: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: .98rem;
+  font-weight: 800;
+  letter-spacing: .015em;
+  color: rgba(var(--rose-rgb),0.88);
+}
+#commission .hidden.md\\:block tbody .addon-price-pill::before {
+  content: "IDR ";
+  margin-right: .36rem;
+  font-size: .78em;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: rgba(var(--rose-rgb),0.72);
+}

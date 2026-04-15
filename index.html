@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dnzrx.studio | Imposter Syndrome Sound</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ethereal: {
+              ink: "#2d243d",
+              twilight: "#40345b",
+              lilac: "#ddd2f2",
+              sky: "#a8d0ea",
+              mist: "#f2edf9",
+              rose: "#d66284",
+              roseDark: "#b74a68",
+              line: "#d5c8e7"
+            }
+          },
+          fontFamily: {
+            headline: ["Plus Jakarta Sans", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-body selection:bg-ethereal-lilac/60 selection:text-ethereal-ink">
+
+  <div data-include="partials/nav.html"></div>
+
+  <div data-include="partials/intro.html"></div>
+  <div data-include="partials/commission.html"></div>
+  <div data-include="partials/flow.html"></div>
+  <div data-include="partials/tc.html"></div>
+  <div data-include="partials/gallery.html"></div>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="scripts/include-loader.js"></script>
+  <script src="scripts/data-navigation.js"></script>
+  <script src="scripts/data-intro.js"></script>
+  <script src="scripts/data-commission.js"></script>
+  <script src="scripts/data-flow.js"></script>
+  <script src="scripts/data-tc.js"></script>
+  <script src="scripts/data-gallery.js"></script>
+  <script src="scripts/site-data.js"></script>
+  <script src="scripts/site-render.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

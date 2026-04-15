@@ -1,0 +1,94 @@
+/* =========================
+   Motion / Accessibility
+========================= */
+/* Motion primitives + global reduced-motion guards */
+@keyframes benefitPulse {
+  0%, 100% {
+    border-color: rgba(var(--rose-rgb),0.52);
+    border-width: 1px;
+    opacity: .5;
+    box-shadow: 0 0 0 0 rgba(var(--rose-rgb),0.0);
+  }
+  50% {
+    border-color: rgba(var(--rose-rgb),0.98);
+    border-width: 1.6px;
+    opacity: 1;
+    box-shadow: 0 0 0 3px rgba(var(--rose-rgb),0.12);
+  }
+}
+@keyframes statusRipple {
+  0% {
+    opacity: .9;
+    transform: scale(.65);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+@keyframes dotPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 5px rgba(var(--rose-rgb),0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 9px rgba(var(--rose-rgb),0.08);
+  }
+}
+@keyframes lineTravel {
+  0% {
+    top: -90px;
+    opacity: 0;
+  }
+  15% {
+    opacity: .95;
+  }
+  85% {
+    opacity: .95;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+@keyframes lineTravelFinal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  16% {
+    opacity: .96;
+  }
+  84% {
+    opacity: .96;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, var(--final-segment-travel, 96px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .status-dot::after,
+  .timeline-dot,
+  .timeline-dot-final::after,
+  .timeline-line-glow,
+  .timeline-line-glow-final,
+  .commission-preview-badge::after,
+  .commission-addon-recommended::after {
+    animation: none !important;
+  }
+  .section-connector-line {
+    transform: scaleY(1);
+    transition: none;
+  }
+  .work-song-listen-btn {
+    transition: none !important;
+  }
+}
