@@ -161,7 +161,7 @@
       return;
     }
     target.innerHTML = items.map(function (text) {
-      return '<li class="flex items-start gap-2"><span class="material-symbols-outlined text-ethereal-rose text-[16px] md:text-[18px] leading-none mt-[2px]">check_circle</span><span>' + text + "</span></li>";
+      return '<li class="tc-snapshot-item"><span class="material-symbols-outlined text-ethereal-rose text-[16px] md:text-[18px] leading-none">check_circle</span><span class="tc-snapshot-text">' + text + "</span></li>";
     }).join("");
   }
 
