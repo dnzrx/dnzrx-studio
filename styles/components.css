@@ -179,12 +179,12 @@
 /* Add-on rows still explicitly list transition properties */
 #commission .commission-addon-item,
 #commission .commission-addon-recommended,
-#commission .hidden.md\:block tbody tr,
-#commission .hidden.md\:block tbody .addon-price-pill {
+#commission .commission-addon-table-view tbody tr,
+#commission .commission-addon-table-view tbody .addon-price-pill {
   transition-duration: var(--hover-slow-duration) !important;
   transition-timing-function: ease !important;
 }
-#commission .hidden.md\:block tbody tr {
+#commission .commission-addon-table-view tbody tr {
   transition-property: background-color, border-color, color, box-shadow !important;
 }
 .cta-title {
@@ -257,6 +257,79 @@
 .commission-addon-recommended .font-semibold,
 .commission-addon-recommended-row > td:first-child {
   color: #7a1f3f;
+}
+
+/* Single-column add-on list (shown while table is hidden) */
+#commission .commission-addon-mobile-list {
+  padding: .78rem;
+  display: grid;
+  gap: .78rem;
+  font-size: .95rem;
+}
+#commission .commission-addon-list-view {
+  display: block;
+}
+#commission .commission-addon-table-view {
+  display: none;
+}
+#commission.commission-two-col .commission-addon-list-view {
+  display: none;
+}
+#commission.commission-two-col .commission-addon-table-view {
+  display: block;
+}
+#commission .commission-addon-mobile-list .commission-addon-item {
+  border-color: rgba(var(--line-rgb),0.72);
+  background: rgba(255,255,255,0.92);
+  padding: .88rem .92rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-content: start;
+  min-height: 9rem;
+}
+#commission .commission-addon-mobile-list .commission-addon-item .font-semibold {
+  font-size: 1.06rem;
+  line-height: 1.28;
+  color: rgba(var(--ink-rgb),0.92);
+}
+#commission .commission-addon-mobile-list .commission-addon-item .text-\[11px\].font-semibold.text-ethereal-roseDark {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: .34rem;
+  padding: .14rem .44rem;
+  border: 1px solid rgba(var(--rose-rgb),0.32);
+  border-radius: 999px;
+  background: rgba(var(--rose-rgb),0.1);
+  font-size: .66rem;
+  letter-spacing: .02em;
+}
+#commission .commission-addon-mobile-list .commission-addon-item p.mt-1 {
+  margin-top: .42rem;
+  color: rgba(var(--twilight-rgb),0.78);
+  font-size: 1rem;
+  line-height: 1.58;
+  max-width: 35ch;
+}
+#commission .commission-addon-mobile-list .commission-addon-mobile-price {
+  margin-top: .8rem;
+  text-align: right;
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: .01em;
+  color: rgba(var(--rose-rgb),0.9);
+  align-self: end;
+}
+#commission .commission-addon-mobile-list .commission-addon-mobile-price .currency {
+  margin-right: .45rem;
+  font-size: .7em;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: rgba(var(--rose-rgb),0.82);
+}
+#commission .commission-addon-mobile-list .commission-addon-recommended {
+  border-color: rgba(var(--rose-rgb),0.56);
+  background: rgba(var(--rose-rgb),0.05);
+  box-shadow: 0 7px 16px rgba(var(--rose-rgb),0.11);
 }
 .commission-check-item {
   display: grid;
@@ -397,7 +470,7 @@ details > summary::-webkit-details-marker {
 
 
 /* Match desktop/tablet add-on pricing language to mobile */
-#commission .hidden.md\\:block tbody .addon-price-pill {
+#commission .commission-addon-table-view tbody .addon-price-pill {
   min-width: auto;
   padding: 0;
   border: 0;
@@ -408,11 +481,19 @@ details > summary::-webkit-details-marker {
   letter-spacing: .015em;
   color: rgba(var(--rose-rgb),0.88);
 }
-#commission .hidden.md\\:block tbody .addon-price-pill::before {
+#commission .commission-addon-table-view tbody .addon-price-pill::before {
   content: "IDR ";
   margin-right: .36rem;
   font-size: .78em;
   font-weight: 700;
   letter-spacing: .08em;
   color: rgba(var(--rose-rgb),0.72);
+}
+@media (min-width: 1024px) {
+  #commission:not(.commission-two-col) .commission-addon-list-view {
+    display: block;
+  }
+  #commission:not(.commission-two-col) .commission-addon-table-view {
+    display: none;
+  }
 }

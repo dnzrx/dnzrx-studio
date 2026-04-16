@@ -270,12 +270,12 @@
     align-content: start;
     min-height: 9.1rem;
   }
-  #commission .commission-addon-item .font-semibold {
-    font-size: 1.08rem;
-    line-height: 1.28;
+  #commission .commission-addon-mobile-list .commission-addon-item .font-semibold {
+    font-size: .9rem;
+    line-height: 1.2;
     color: rgba(var(--ink-rgb),0.92);
   }
-  #commission .commission-addon-item .text-\[11px\].font-semibold.text-ethereal-roseDark {
+  #commission .commission-addon-mobile-list .commission-addon-item .text-\[11px\].font-semibold.text-ethereal-roseDark {
     display: inline-flex;
     width: fit-content;
     margin-top: .36rem;
@@ -283,7 +283,7 @@
     border: 1px solid rgba(var(--rose-rgb),0.32);
     border-radius: 999px;
     background: rgba(var(--rose-rgb),0.1);
-    font-size: .66rem;
+    font-size: .58rem;
     letter-spacing: .02em;
   }
   #commission .commission-addon-recommended {
@@ -291,25 +291,25 @@
     background: rgba(var(--rose-rgb),0.05);
     box-shadow: 0 7px 16px rgba(var(--rose-rgb),0.11);
   }
-  #commission .commission-addon-item p.mt-1 {
+  #commission .commission-addon-mobile-list .commission-addon-item p.mt-1 {
     margin-top: .42rem;
     color: rgba(var(--twilight-rgb),0.78);
-    font-size: 1.01rem;
-    line-height: 1.62;
+    font-size: .82rem;
+    line-height: 1.42;
     max-width: 35ch;
   }
-  #commission .commission-addon-mobile-price {
-    margin-top: .82rem;
+  #commission .commission-addon-mobile-list .commission-addon-mobile-price {
+    margin-top: .72rem;
     text-align: right;
-    font-size: 1.2rem;
+    font-size: .9rem;
     font-weight: 800;
     letter-spacing: .01em;
     color: rgba(var(--rose-rgb),0.9);
     align-self: end;
   }
-  #commission .commission-addon-mobile-price .currency {
+  #commission .commission-addon-mobile-list .commission-addon-mobile-price .currency {
     margin-right: .45rem;
-    font-size: .7em;
+    font-size: .62em;
     font-weight: 700;
     letter-spacing: .1em;
     color: rgba(var(--rose-rgb),0.82);

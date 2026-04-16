@@ -67,6 +67,15 @@
     transform: translate(-50%, var(--final-segment-travel, 96px));
   }
 }
+@keyframes sectionProgressPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(var(--rose-rgb),0.16);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(var(--rose-rgb),0.26);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -90,5 +99,9 @@
   }
   .work-song-listen-btn {
     transition: none !important;
+  }
+  .section-progress-link {
+    transition: none !important;
+    animation: none !important;
   }
 }
