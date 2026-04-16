@@ -41,6 +41,16 @@
   .timeline-card {
     border-radius: var(--card-radius);
   }
+  #flow .timeline-card h4,
+  #tc .tc-policy-card h4 {
+    font-size: .96rem;
+    line-height: 1.3;
+  }
+  #flow .timeline-card p,
+  #tc .tc-policy-point {
+    font-size: .875rem;
+    line-height: 1.55;
+  }
 }
 @media (max-width: 639px) {
   body {
@@ -178,22 +188,33 @@
   }
 }
 @media (max-width: 767px) {
+  #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-item {
+    gap: .52rem;
+  }
+  #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-item .material-symbols-outlined {
+    width: 1.12rem;
+    min-width: 1.12rem;
+    font-size: 1.02rem !important;
+  }
   #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-text {
-    font-size: .95rem;
-    line-height: 1.42;
+    font-size: .9rem;
+    line-height: 1.38;
   }
   #tc [data-render="policy-details-mobile"] {
     display: grid;
     gap: .78rem;
   }
   #tc .md\:hidden details {
-    padding: .96rem 1rem;
+    padding: .72rem .9rem;
     border-radius: 1.06rem;
   }
+  #tc .md\:hidden .tc-mobile-summary {
+    min-height: 42px;
+  }
   #tc .md\:hidden details p {
-    margin-top: .42rem;
-    font-size: .98rem;
-    line-height: 1.72;
+    margin-top: .36rem;
+    font-size: .875rem;
+    line-height: 1.55;
   }
   #tc .md\:hidden .tc-mobile-detail-copy {
     margin-top: .42rem;
@@ -209,7 +230,7 @@
     color: rgba(var(--ink-rgb),0.9);
   }
   #tc .md\:hidden .tc-mobile-summary-main {
-    font-size: 1.04rem;
+    font-size: .96rem;
     line-height: 1.3;
   }
   #commission .panel {

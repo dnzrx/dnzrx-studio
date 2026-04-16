@@ -313,7 +313,7 @@ details > summary::-webkit-details-marker {
 }
 .tc-snapshot-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: .62rem;
   width: 100%;
 }
@@ -322,17 +322,16 @@ details > summary::-webkit-details-marker {
   align-items: center;
   justify-content: center;
   flex: none;
-  width: 1.15rem;
-  min-width: 1.15rem;
-  margin-top: .16rem;
+  width: 1.2rem;
+  min-width: 1.2rem;
+  font-size: 1.1rem !important;
   line-height: 1;
-  transform: none;
 }
 .tc-snapshot-text {
   display: block;
   flex: 1;
   min-width: 0;
-  line-height: 1.45;
+  line-height: 1.42;
 }
 .tc-policy-points {
   max-width: 43ch;
