@@ -74,7 +74,7 @@
       var lower = Math.min(fromIdx, toIdx);
       var g = gapBetweenAdjacentDots(lower);
       var down = toIdx > fromIdx;
-      var duration = 240; // Sweet spot duration
+      var duration = 180; // A balanced sweet spot between smooth tracking and snappy speed
       var ease = "cubic-bezier(0.2, 0.85, 0.24, 1)"; // Snappy easing
 
       clearAnimationTimers();
