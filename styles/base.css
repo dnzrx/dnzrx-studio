@@ -144,8 +144,14 @@ footer {
 .nav-link {
   position: relative;
   z-index: 1;
+  font-size: .9375rem;
   border-bottom: 2px solid transparent;
   transition: color .26s ease, border-color .26s ease;
+}
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 1rem;
+  }
 }
 .nav-link.is-active {
   color: rgba(var(--ink-rgb),1) !important;
@@ -179,7 +185,25 @@ footer {
   opacity: 1;
   pointer-events: auto;
 }
+.section-progress-track {
+  position: relative;
+}
+.section-progress-indicator {
+  position: absolute;
+  left: 50%;
+  z-index: 0;
+  width: 6px;
+  margin-left: -3px;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(180deg, rgba(var(--rose-rgb),0.92), rgba(var(--rose-rgb),0.45));
+  box-shadow: 0 0 22px rgba(var(--rose-rgb),0.42);
+  transition: top 1.12s cubic-bezier(.2, .85, .24, 1), height 1.12s cubic-bezier(.2, .85, .24, 1), opacity .35s ease;
+}
 .section-progress-list {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 3.25rem;
   margin: 0;
@@ -208,6 +232,8 @@ footer {
   display: none;
 }
 .section-progress-link {
+  position: relative;
+  z-index: 1;
   display: block;
   width: .85rem;
   height: .85rem;
@@ -222,11 +248,11 @@ footer {
 .section-progress-link.is-active {
   width: .85rem;
   height: .85rem;
-  border-color: rgba(var(--rose-rgb),0.96);
-  background: rgba(var(--rose-rgb),0.5);
-  box-shadow: 0 0 0 6px rgba(var(--rose-rgb),0.22);
+  border-color: rgba(var(--rose-rgb),0.98);
+  background: rgba(var(--rose-rgb),0.92);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.95), 0 0 0 5px rgba(var(--rose-rgb),0.28);
   transform: none;
-  animation: sectionProgressPulse 1.7s ease-in-out infinite;
+  animation: sectionProgressPulse 2.2s ease-in-out infinite;
 }
 @media (min-width: 1280px) {
   .section-progress-list {
@@ -244,7 +270,8 @@ footer {
   .section-progress-link.is-active {
     width: 1rem;
     height: 1rem;
-    box-shadow: 0 0 0 6.5px rgba(var(--rose-rgb),0.24);
+    background: rgba(var(--rose-rgb),0.92);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.95), 0 0 0 5px rgba(var(--rose-rgb),0.28);
   }
 }
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -263,7 +290,8 @@ footer {
   .section-progress-link.is-active {
     width: .9rem;
     height: .9rem;
-    box-shadow: 0 0 0 5.8px rgba(var(--rose-rgb),0.23);
+    background: rgba(var(--rose-rgb),0.92);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.95), 0 0 0 5px rgba(var(--rose-rgb),0.28);
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -286,7 +314,8 @@ footer {
   .section-progress-link.is-active {
     width: .96rem;
     height: .96rem;
-    box-shadow: 0 0 0 5.6px rgba(var(--rose-rgb),0.24);
+    background: rgba(var(--rose-rgb),0.92);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.95), 0 0 0 5px rgba(var(--rose-rgb),0.28);
   }
 }
 .brand-lockup {
@@ -396,7 +425,8 @@ footer {
   .section-progress-link.is-active {
     width: .86rem;
     height: .86rem;
-    box-shadow: 0 0 0 4.9px rgba(var(--rose-rgb),0.23);
+    background: rgba(var(--rose-rgb),0.92);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.95), 0 0 0 4px rgba(var(--rose-rgb),0.28);
     transform: none;
   }
 }

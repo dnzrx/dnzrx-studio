@@ -70,10 +70,10 @@
 @keyframes sectionProgressPulse {
   0%,
   100% {
-    box-shadow: 0 0 0 4px rgba(var(--rose-rgb),0.16);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.95), 0 0 0 5px rgba(var(--rose-rgb),0.24);
   }
   50% {
-    box-shadow: 0 0 0 8px rgba(var(--rose-rgb),0.26);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.95), 0 0 0 9px rgba(var(--rose-rgb),0.32);
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -103,5 +103,8 @@
   .section-progress-link {
     transition: none !important;
     animation: none !important;
+  }
+  .section-progress-indicator {
+    transition: none !important;
   }
 }

@@ -48,7 +48,7 @@
   }
   #flow .timeline-card p,
   #tc .tc-policy-point {
-    font-size: .875rem;
+    font-size: .93rem;
     line-height: 1.55;
   }
 }
@@ -197,8 +197,8 @@
     height: 1rem;
   }
   #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-text {
-    font-size: .9rem;
-    line-height: 1.38;
+    font-size: .93rem;
+    line-height: 1.55;
   }
   #tc [data-render="policy-details-mobile"] {
     display: grid;
@@ -213,7 +213,7 @@
   }
   #tc .md\:hidden details p {
     margin-top: .36rem;
-    font-size: .875rem;
+    font-size: .93rem;
     line-height: 1.55;
   }
   #tc .md\:hidden .tc-mobile-detail-copy {
@@ -271,8 +271,8 @@
     min-height: 9.1rem;
   }
   #commission .commission-addon-mobile-list .commission-addon-item .font-semibold {
-    font-size: .9rem;
-    line-height: 1.2;
+    font-size: .96rem;
+    line-height: 1.28;
     color: rgba(var(--ink-rgb),0.92);
   }
   #commission .commission-addon-mobile-list .commission-addon-item .text-\[11px\].font-semibold.text-ethereal-roseDark {
@@ -283,7 +283,7 @@
     border: 1px solid rgba(var(--rose-rgb),0.32);
     border-radius: 999px;
     background: rgba(var(--rose-rgb),0.1);
-    font-size: .58rem;
+    font-size: .62rem;
     letter-spacing: .02em;
   }
   #commission .commission-addon-recommended {
@@ -294,14 +294,14 @@
   #commission .commission-addon-mobile-list .commission-addon-item p.mt-1 {
     margin-top: .42rem;
     color: rgba(var(--twilight-rgb),0.78);
-    font-size: .82rem;
-    line-height: 1.42;
+    font-size: .93rem;
+    line-height: 1.55;
     max-width: 35ch;
   }
   #commission .commission-addon-mobile-list .commission-addon-mobile-price {
     margin-top: .72rem;
     text-align: right;
-    font-size: .9rem;
+    font-size: .96rem;
     font-weight: 800;
     letter-spacing: .01em;
     color: rgba(var(--rose-rgb),0.9);
@@ -318,8 +318,9 @@
     line-height: 1.55;
   }
   #commission .commission-addon-subtitle {
+    font-size: .97rem;
     max-width: 27ch;
-    line-height: 1.42;
+    line-height: 1.55;
   }
   #commission .addon-price-pill {
     min-width: 2.7rem;
