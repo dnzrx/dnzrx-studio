@@ -66,6 +66,7 @@ body {
 #tc,
 #gallery {
   scroll-margin-top: 6rem;
+  overflow-x: clip;
 }
 .site-shell {
   width: 100%;

@@ -312,26 +312,30 @@ details > summary::-webkit-details-marker {
   list-style: none;
 }
 .tc-snapshot-item {
-  display: flex;
-  align-items: center;
-  gap: .62rem;
+  display: grid;
+  grid-template-columns: 1.05rem minmax(0, 1fr);
+  align-items: start;
+  column-gap: .58rem;
   width: 100%;
 }
-.tc-snapshot-item .material-symbols-outlined {
+.tc-snapshot-icon {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   flex: none;
-  width: 1.2rem;
-  min-width: 1.2rem;
-  font-size: 1.1rem !important;
-  line-height: 1;
+  width: 1.05rem;
+  min-width: 1.05rem;
+  height: 1.05rem;
+  color: rgba(var(--rose-rgb),0.95);
+  margin-top: .07rem;
+}
+.tc-snapshot-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .tc-snapshot-text {
   display: block;
-  flex: 1;
   min-width: 0;
-  line-height: 1.42;
+  line-height: 1.38;
 }
 .tc-policy-points {
   max-width: 43ch;

@@ -161,7 +161,16 @@
       return;
     }
     target.innerHTML = items.map(function (text) {
-      return '<li class="tc-snapshot-item"><span class="material-symbols-outlined text-ethereal-rose text-[16px] md:text-[18px] leading-none">check_circle</span><span class="tc-snapshot-text">' + text + "</span></li>";
+      return '' +
+        '<li class="tc-snapshot-item">' +
+        '<span class="tc-snapshot-icon" aria-hidden="true">' +
+        '<svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">' +
+        '<circle cx="12" cy="12" r="9.4" fill="none" stroke="currentColor" stroke-width="2"/>' +
+        '<path d="M8 12.2l2.5 2.6L16 9.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>' +
+        "</svg>" +
+        "</span>" +
+        '<span class="tc-snapshot-text">' + text + "</span>" +
+        "</li>";
     }).join("");
   }
 

@@ -189,12 +189,12 @@
 }
 @media (max-width: 767px) {
   #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-item {
-    gap: .52rem;
+    column-gap: .52rem;
   }
-  #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-item .material-symbols-outlined {
-    width: 1.12rem;
-    min-width: 1.12rem;
-    font-size: 1.02rem !important;
+  #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-icon {
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
   }
   #tc [data-render="policy-snapshot-mobile"] .tc-snapshot-text {
     font-size: .9rem;
