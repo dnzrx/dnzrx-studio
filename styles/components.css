@@ -258,6 +258,29 @@
 .commission-addon-recommended-row > td:first-child {
   color: #7a1f3f;
 }
+.commission-check-item {
+  display: grid;
+  grid-template-columns: 1.05rem minmax(0, 1fr);
+  align-items: start;
+  column-gap: .58rem;
+}
+.commission-check-icon {
+  display: inline-flex;
+  width: 1.05rem;
+  min-width: 1.05rem;
+  height: 1.05rem;
+  color: rgba(var(--rose-rgb),0.95);
+  margin-top: .06rem;
+}
+.commission-check-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.commission-check-text {
+  min-width: 0;
+  line-height: 1.38;
+}
 
 /* =========================
    T&C Mobile Details
